@@ -33,17 +33,20 @@ void calculator_operations(){
 
 void addition(){
 
-    double a, b, sum;
+    double a, b = 0, sum = 0;
 
     cout << "\n\nEnter first number: ";
     cin >> a;
 
-    cout << "Enter second number: ";
-    cin >> b;
+    while(a != 0){
 
-    sum = a + b;
+    sum = sum + a;
+    b++;
 
-    cout << endl << a << " + " << b << " = " << sum << endl;
+    cout << "Enter another number or enter '0' to calculate the sum: ";
+    cin >> a;
+    }
+    cout << endl << "Sum of " << b << " numbers is " << sum << endl;
 }
 
 void subtraction(){
